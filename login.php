@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <!-- Хедер -->
         <div class="HeaderWrapper">
             <div class="Header">
                 <div class="LogoWrapper">
