@@ -1,3 +1,12 @@
+<?php
+session_start();
+if(!isset($_SESSION['user'])){
+    echo "<script>self.location='login.php';</script>";
+} else {
+    header('Location: profile.php');
+}
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -29,9 +38,6 @@
                 <input type="password" placeholder="password" name="password" class="LoginInput">
                 <button class="LoginBtn">Войти</button>
                 <a href="registr.php" class="LoginA">Регистрация</a>
-                <?php
-                session_start();
-                ?>
                 <?php
                 if ($_SESSION['message'] ?? false){
                     echo '<p>'.$_SESSION['message'].'</p>';
